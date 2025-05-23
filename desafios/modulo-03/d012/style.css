@@ -50,7 +50,32 @@ a:hover {
 
 main {
     background-color: white;
-    max-width: 100px;
+    max-width: 600px;
     margin-left: 30px;
-    border: 2px solid blue;
+    margin-top: 50px;
+}
+
+.normal-section {
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    margin-bottom: 80px;
+}
+
+.parallax-section {
+    height: 500px;
+    background-image: url('imagens/background001.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+}
+
+.content{
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
 }
