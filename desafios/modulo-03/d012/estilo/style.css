@@ -75,7 +75,7 @@ section.imagem {
 }
 
 section.imagem > p {
-    display: inline-block;
+    display: inline-block; /* Permite que o parágrafo se comporte como um bloco inline */
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.253);
 }
