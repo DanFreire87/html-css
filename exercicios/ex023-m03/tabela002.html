@@ -10,8 +10,33 @@
         }
 
         table {
-            width: 500px;
+            width: 600px;
             border-collapse: collapse;
+            position: relative;
+        }
+        
+        tbody > tr:nth-child(2n) /* Seleciona linhas pares do corpo da tabela */{ 
+            background-color: lightgrey;
+        }
+        
+        
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: lightgray;
+        }
+        
+        thead, tfoot {
+            background-color: rgb(90, 90, 90);
+            color: white;
+        }
+        
+        thead > tr > th {
+            position: sticky;
+            top: -1px; /* Fixa o cabeçalho no topo da tabela */
+            background-color: rgb(90, 90, 90);
         }
 
         td, th {
@@ -23,11 +48,6 @@
             text-align: right;
         }
 
-        thead, tfoot {
-            background-color: gray;
-            color: white;
-        }
-        
 
     </style>
 </head>
@@ -37,6 +57,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -46,13 +67,14 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativas em 2024</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População em 2024</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody>            
             <tr>
                 <td>São Paulo</td>
                 <td class="num">45 973 194</td>
@@ -164,7 +186,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>212 583 750</strong></td>
             </tr>
         </tfoot>
